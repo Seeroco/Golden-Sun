@@ -1,0 +1,50 @@
+﻿@using Golden_Sun_2.Models
+<h2>Items</h2>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Stat
+        </th>
+        <th>
+            Cost
+        </th>
+        <th>
+            Rare
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (Item item in Model.Inventory)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                @if (item.Rare)
+                {
+                    <p>Yes</p>
+                }
+                else
+                {
+                    <p>No</p>
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

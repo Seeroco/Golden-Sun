@@ -1,0 +1,27 @@
+﻿@model Golden_Sun_2.Models.Character
+@using Golden_Sun_2.Models
+<h2>Djinns</h2>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Element
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (Djinn djinn in Model.Djinns)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => djinn.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => djinn.Element)
+            </td>
+        </tr>
+    }
+
+</table>

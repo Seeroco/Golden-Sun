@@ -22,6 +22,7 @@ namespace Golden_Sun_2.Controllers
                 charNames.Add(character.Name);
             }
             return View("Index", charNames);
+
         }
 
         public ActionResult GetCharacter(string charName)

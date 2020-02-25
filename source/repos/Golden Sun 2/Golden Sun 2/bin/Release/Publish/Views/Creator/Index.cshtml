@@ -1,0 +1,18 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "Get a Character";
+}
+
+
+    <div class="container-fluid">
+
+        <form action="/Creator/GetCharacter" method="post">
+            <h1>Select the character you want to play as</h1>
+           
+                @Html.DropDownList("charName", new SelectList(Model),new { @class = "form-control" })
+                
+            <input type="submit" value="Search" />
+        </form>
+        
+    </div>
+

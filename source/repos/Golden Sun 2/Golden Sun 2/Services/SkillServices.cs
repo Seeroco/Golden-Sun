@@ -15,9 +15,9 @@ namespace Golden_Sun_2.Services
             SqlDataReader reader = db.connect("SELECT * FROM skills");
             while(reader.Read())
             {
-                reader["name"];
+                string s = reader["name"].ToString();
             }
-
+            return new List<Skill>();
         }
     }
 }

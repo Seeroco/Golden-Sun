@@ -1,0 +1,15 @@
+﻿@model Golden_Sun_2.Models.Character
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<h3>Your character is...</h3>
+<h1 style="font-size: 100px">@Model.Name</h1>
+
+<div class="container container-fluid">
+    <h3>Element: @Model.Element</h3>
+    @Html.Partial("Djinns")
+    @Html.Partial("Stats")
+    @Html.Partial("Items")
+    @Html.Partial("Psynergies")
+</div>
