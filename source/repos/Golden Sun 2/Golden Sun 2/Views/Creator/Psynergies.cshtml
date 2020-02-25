@@ -1,0 +1,45 @@
+﻿@using Golden_Sun_2.Models
+<h2>Psynergies</h2>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Damage
+        </th>
+        <th>
+            PP
+        </th>
+        <th>
+            Element
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (Skill skill in Model.Psynergies)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => skill.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => skill.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => skill.Damage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => skill.PPCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => skill.Element)
+            </td>
+        </tr>
+    }
+
+</table>
